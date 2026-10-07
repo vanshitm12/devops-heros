@@ -342,3 +342,19 @@ Students should remember this:
 * Troubleshoot Services
 * Test Kubernetes DNS
 * Identify root causes instead of guessing
+
+## Submission index
+
+- Command exercises: `01-kubectl-get` … `05-events` (per-command READMEs)
+- Issue exercises: `06-crashloopbackoff`, `07-imagepullbackoff`,
+  `08-pending-pods`, `09-service-dns-troubleshooting`
+- Mini project: [mini-project/README.md](mini-project/README.md) (exercise,
+  unanswered) + my [ANSWERS.md](mini-project/ANSWERS.md) and
+  [RUNBOOK.md](mini-project/RUNBOOK.md)
+
+## Status
+
+Mini-project answers are reasoned from the manifests; the diagnostic exercise
+was **not** live-executed — before/after cells are left blank for real runs.
+The bad image tag is expected to surface `ErrImagePull`/`ImagePullBackOff`
+based on the manifest, but that was not observed in a live cluster here.

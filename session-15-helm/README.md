@@ -125,3 +125,16 @@ A: Inspect helm secrets with kubectl get secrets -l owner=helm. Find the stuck p
 * **Helm Documentation:** https://helm.sh/docs/
 * **Helm Chart Template Guide:** https://helm.sh/docs/chart_template_guide/
 * **Helm CLI Reference:** https://helm.sh/docs/helm/
+
+## Submission index
+
+- Concept READMEs: `01-what-is-helm` … `09-deploying-application`
+- Mini project: `mini-project/` (`notes-chart`) with
+  [mini-project/VERIFICATION.md](mini-project/VERIFICATION.md) — real
+  `helm lint` + `helm template` output (dev and `values-prod.yaml` renders)
+
+## Status
+
+`helm lint` and `helm template` were verified locally (real output in
+VERIFICATION.md). Cluster `install`/`upgrade`/`rollback` against a live
+release were not performed.

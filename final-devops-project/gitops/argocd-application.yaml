@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devops-demo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Nency-Ravaliya/devops-heros.git
+    targetRevision: main
+    path: final-devops-project/helm/devops-demo
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: devops-demo
+  syncPolicy:
+    # Manual sync only — no automated policy. Sync from the Argo CD UI or:
+    #   argocd app sync devops-demo
+    syncOptions:
+      - CreateNamespace=true

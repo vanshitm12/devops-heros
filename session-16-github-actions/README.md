@@ -112,3 +112,16 @@ A: Use caching with `actions/cache` to cache dependencies (node_modules, pip pac
 * **GitHub Actions Documentation:** https://docs.github.com/en/actions
 * **GitHub Actions Marketplace:** https://github.com/marketplace?type=actions
 * **Workflow syntax reference:** https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+
+## Submission index
+
+- Mini project write-up: [mini-project/README.md](mini-project/README.md)
+- Live pipeline configs (repo root): [../.github/workflows/devops-ci.yml](../.github/workflows/devops-ci.yml)
+  and [../.github/workflows/devops-cd.yml](../.github/workflows/devops-cd.yml)
+- Shared app under test: [../final-devops-project/](../final-devops-project/)
+
+## Status
+
+CI triggers on pushes/PRs touching `final-devops-project/**`; CD is manual
+(`workflow_dispatch`). No CI/CD run has been executed yet — pipeline
+screenshots remain to be captured after pushing.

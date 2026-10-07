@@ -1,0 +1,10 @@
+groups:
+  - name: devops-demo
+    rules:
+      - alert: DevopsDemoDown
+        expr: up{job="devops-demo"} == 0
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: devops-demo target is unreachable

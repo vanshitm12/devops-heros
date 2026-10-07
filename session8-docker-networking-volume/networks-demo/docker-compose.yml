@@ -1,0 +1,49 @@
+# Three named bridge networks.
+# - frontend-net : frontend <-> backend connectivity
+# - db-net       : backend <-> database connectivity
+# - ops-net      : isolated management network (database only)
+# backend is attached to EXACTLY two networks: frontend-net and db-net.
+networks:
+  frontend-net:
+    driver: bridge
+  db-net:
+    driver: bridge
+  ops-net:
+    driver: bridge
+
+services:
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      # Bind mount: edits to ./html/index.html show up without a restart
+      - ./html:/usr/share/nginx/html:ro
+    networks:
+      - frontend-net
+    depends_on:
+      - backend
+
+  backend:
+    image: nginx:alpine
+    networks:
+      - frontend-net
+      - db-net
+
+  database:
+    image: mysql:8.0
+    # Passwords come from a local untracked .env file (see .env.example).
+    # Never commit real passwords.
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD in .env}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-appdb}
+      MYSQL_USER: ${MYSQL_USER:-appuser}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD in .env}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - db-net
+      - ops-net
+
+volumes:
+  db_data:

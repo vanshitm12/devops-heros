@@ -1,0 +1,2 @@
+bucket_name  = "REPLACE_WITH_UNIQUE_BUCKET_NAME"
+allowed_cidr = "REPLACE_WITH_YOUR_IP/32"
