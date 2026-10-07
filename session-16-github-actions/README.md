@@ -18,16 +18,16 @@ With CI/CD, every push to Git triggers automated build, test, and deploy.
 
 | Folder | Topic |
 |--------|-------|
-| `01-ci-vs-cd/` | What is CI, what is CD, where they differ |
-| `02-pipeline-concepts/` | Stages, steps, jobs, and how they connect |
-| `03-github-actions-intro/` | What GitHub Actions is, how it works |
-| `04-workflows/` | Workflow YAML syntax, triggers, on: push |
-| `05-jobs-steps/` | Jobs, steps, uses, run, needs |
-| `06-runners/` | GitHub-hosted runners, self-hosted runners |
-| `07-secrets/` | Storing credentials, using secrets in workflows |
-| `08-artifacts/` | Uploading and downloading build artifacts |
-| `09-build-test-pipeline/` | Full CI pipeline: checkout, build, test, lint |
-| `mini-project/` | Build a complete CI pipeline for a Python app |
+| `01-ci-vs-cd 10-33-34-211/` | What is CI, what is CD, where they differ |
+| `02-pipeline-concepts 10-33-34-222/` | Stages, steps, jobs, and how they connect |
+| `03-github-actions-intro 10-33-34-226/` | What GitHub Actions is, how it works |
+| `04-workflows 10-33-34-230/` | Workflow YAML syntax, triggers, on: push |
+| `05-jobs-steps 10-33-34-238/` | Jobs, steps, uses, run, needs |
+| `06-runners 10-33-34-242/` | GitHub-hosted runners, self-hosted runners |
+| `07-secrets 10-33-34-248/` | Storing credentials, using secrets in workflows |
+| `08-artifacts 10-33-34-260/` | Uploading and downloading build artifacts |
+| `09-build-test-pipeline 10-33-34-262/` | Full CI pipeline: checkout, build, test, lint |
+| `mini-project 10-33-34-265/` | Build a complete CI pipeline for a Python app |
 
 ---
 
@@ -115,7 +115,7 @@ A: Use caching with `actions/cache` to cache dependencies (node_modules, pip pac
 
 ## Submission index
 
-- Mini project write-up: [mini-project/README.md](mini-project/README.md)
+- Mini project write-up: [mini-project (submodule)](mini-project%2010-33-34-265)
 - Live pipeline configs (repo root): [../.github/workflows/devops-ci.yml](../.github/workflows/devops-ci.yml)
   and [../.github/workflows/devops-cd.yml](../.github/workflows/devops-cd.yml)
 - Shared app under test: [../final-devops-project/](../final-devops-project/)

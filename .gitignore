@@ -7,3 +7,5 @@ __pycache__/
 *.tfstate.*
 *.tfplan
 crash.log
+./node_modules/
+.zip
